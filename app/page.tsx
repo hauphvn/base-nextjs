@@ -1,5 +1,6 @@
 import Navbar from "@/app/components/Navbar";
 import FormRegistry from "@/app/components/FormRegistry";
+import Contact from "@/app/components/Contact";
 
 export default function Home() {
     return (
@@ -23,8 +24,12 @@ export default function Home() {
             </div>
             {/*End Intro section*/}
             {/*Form registry*/}
-                <FormRegistry/>
+            <FormRegistry/>
             {/*End Form registry*/}
+            {/*Contact*/}
+            <Contact/>
+            {/*End Contact*/}
+            {/*Footer*/}
             <div className={'h-[100px]'}></div>
         </main>
     );
