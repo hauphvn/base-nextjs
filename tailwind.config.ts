@@ -21,14 +21,15 @@ const config: Config = {
         },
         extend: {
             colors: {
-                primary: "#38A7FF",
+                primary: "#F6821F",
                 secondary: {
                     100: "#E2E2D5",
                     200: "#888883",
                 },
+                subText: "#666666",
                 accent: "#FF5733",
                 hover: "#FFC300",
-                body: "#dedede",
+                body: "#ffffff",
             },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
