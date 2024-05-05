@@ -66,3 +66,26 @@
         @apply text-accent;
     }
 }
+@layer components{
+    .custom-input:hover, .custom-input:focus, .custom-input:active {
+        border-color: #334821 ! important;
+    }
+    .custom-checkbox {
+        transform: scale(0.9);
+    }
+}
+.ant-space-item {
+    width: 100% !important;
+}
+.ant-select-selection-item{
+    background-color: transparent;
+    border: none;
+}
+input[type="checkbox" i] {
+    border: 2px solid #666666;
+    width: 18px;
+    height: 18px;
+}
+input[type="checkbox"]:checked {
+    background-color: red; /* Change this to your desired color */
+}
