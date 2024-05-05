@@ -13,7 +13,7 @@ export default function Home() {
                 <div style={{lineHeight: '16.94px', letterSpacing: '2px'}}
                      className="sub-intro text-[14px] font-[500] text-subText">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
                     when an unknown
                 </div>
                 <div className="flex justify-center items-center">
