@@ -1,6 +1,7 @@
 import Navbar from "@/app/components/Navbar";
 import FormRegistry from "@/app/components/FormRegistry";
 import Contact from "@/app/components/Contact";
+import Footer from "@/app/components/Footer";
 
 export default function Home() {
     return (
@@ -30,7 +31,7 @@ export default function Home() {
             <Contact/>
             {/*End Contact*/}
             {/*Footer*/}
-            <div className={'h-[100px]'}></div>
+            <Footer/>
         </main>
     );
 }

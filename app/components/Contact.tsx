@@ -6,7 +6,7 @@ import AppStore from "@/public/assets/images/appleStore.png";
 import PlayStore from "@/public/assets/images/googlePlay.png";
 const Contact = () => {
     return (
-        <div className={'mx-[16px]'}>
+        <div className={'mx-[16px] mb-[50px]'}>
             <div className={'title text-primary text-center text-[30px] font-[600]'}>
                 Lorem Ipsum is simply dummy text of the
             </div>
@@ -17,7 +17,7 @@ const Contact = () => {
                 <div className={'us text-primary text-center text-[30px] font-[600]'}>
                     Liên hệ với chúng tôi!
                 </div>
-                <div className="icons-wrapper flex gap-x-[20px] flex-wrap max-w-[208px] justify-center">
+                <div className="icons-wrapper flex gap-[20px] flex-wrap max-w-[208px] justify-center">
                     <div
                         className={'svg-item w-[56px] h-[56px] bg-primaryOpacity50 rounded-[8px] flex justify-center items-center'}>
                         <FacebookSVG/>
