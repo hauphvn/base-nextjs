@@ -7,6 +7,7 @@ const config: Config = {
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
+
         container: {
             padding: {
                 DEFAULT: '15px'
@@ -20,6 +21,25 @@ const config: Config = {
             '2xl': '1536px'
         },
         extend: {
+            backgroundImage: {
+                'custom-intro-bg': "url('/assets/images/bg-combine.png')",
+            },
+            backgroundPosition: {
+                'custom-intro-bg-position': 'bottom right',
+            },
+            backgroundSize: {
+                'custom-intro-bg-size': '60% auto',
+            },
+            backgroundRepeat: {
+                'custom-intro-bg-repeat': 'no-repeat',
+            },
+            borderRadius: {
+                'custom-rounded-image-1': '90px 0px 90px 0px',
+                'custom-rounded-image-2': '0px 90px 0px 90px',
+            },
+            boxShadow:{
+                'custom-shadow-form': '0px 4px 84px 0px #0000001A',
+            },
             colors: {
                 primary: "#F6821F",
                 primaryOpacity50: "#FFF8ED",
@@ -32,11 +52,11 @@ const config: Config = {
                 hover: "#FFC300",
                 body: "#ffffff",
             },
-            backgroundImage: {
-                "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-                "gradient-conic":
-                    "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-            },
+            // backgroundImage: {
+            //     "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+            //     "gradient-conic":
+            //         "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+            // },
         },
     },
     plugins: [],

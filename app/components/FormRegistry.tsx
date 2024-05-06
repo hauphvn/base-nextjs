@@ -17,7 +17,7 @@ const FormRegistry = () => {
         defaultValues: formRegistryDefault,
     });
     return (
-        <div className={'form-registry mx-[17px] my-[19px] px-[23px] py-[40px] rounded-[12px] gap-y-[20px] shadow'}>
+        <div className={'form-registry mx-[17px] my-[19px] px-[23px] md:px-[88.5px] py-[40px] rounded-[12px] gap-y-[20px] shadow-custom-shadow-form'}>
             <div className={'title-wrapper flex gap-y-[20px] flex-col mb-3'}>
                 <div style={{lineHeight: '36px'}}
                      className="title text-[30px] font-[600] text-primary text-center">Đăng ký thông tin

@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth!important;
+}
+@keyframes ringing {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(2deg); }
+    20% { transform: rotate(-5deg); }
+    30% { transform: rotate(2deg); }
+    40% { transform: rotate(-2deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.ringing-phone {
+    animation: ringing 1s infinite;
+}
 .ripple {
     position: relative;
     overflow: hidden;
