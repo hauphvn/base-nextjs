@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <nav className={'flex justify-between items-center fixed top-0 bg-[white] h-[88px] z-10 w-full py-[16px] px-[20px] border shadow' +
             ' xl:max-w-[1440px] xl:px-[50px] xl:shadow-lg'}>
-           <Link href={'#top'}>
+           <Link href={'#home'}>
                <Image src={Logo} width={100} height={100} alt={'phuc-khang-gems-logo'}/>
            </Link>
             <div className={'flex justify-center items-center gap-x-3'}>

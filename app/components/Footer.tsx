@@ -4,6 +4,7 @@ import LogoFooter from '@/public/assets/images/footerMobile.png';
 import GooglePlay from '@/public/assets/images/googlePlay.png';
 import AppleStore from '@/public/assets/images/appleStore.png';
 import {EmailSVG, FacebookSVG, MapSVG, PhoneSVG, TiktokSVG} from "@/public/assets/svgs";
+import Link from "next/link";
 import StoreGoogleMap from "@/app/components/StoreGoogleMap";
 
 const Footer = () => {
@@ -20,11 +21,11 @@ const Footer = () => {
                                  className={'title text-primary font-[600] text-[22px]'}>
                                 Đăng ký tư vấn và theo dõi những sản phẩm mới của chúng tôi
                             </div>
-                            <div className={'relative'}>
-                                <input type="text" placeholder={'Địa chỉ email'}
-                                       className={'input-email border border-[#DEDFE0] placeholder-primary mt-[20px] w-full h-[56px] rounded-full px-[16px] text-[14px]'}/>
+                            <div className={'relative border border-[#DEDFE0] rounded-full mt-[20px] overflow-hidden w-full pr-[16px] pl-[16px]'}>
+                                <input  type="text" placeholder={'Địa chỉ email'}
+                                       className={'w-[calc(100%-110px)]  custom-input-no-border input-email  placeholder-primary h-[56px] text-[14px]'}/>
                                 <button
-                                    className={'btn absolute top-[26px] right-[8px] h-[43px] w-[110.9px] px-[0] py-[0] rounded-full'}>
+                                    className={'btn absolute top-[6px] right-[8px] h-[43px] w-[110.9px] px-[0] py-[0] rounded-full z-2'}>
                                     <span className={'text-[14px]'}>Đăng ký ngay</span>
                                 </button>
                             </div>
@@ -34,10 +35,14 @@ const Footer = () => {
                                 Ứng dụng Phuc Khang Gems
                             </div>
                             <div className={'flex gap-x-[20.82px]'}>
-                                <Image src={GooglePlay} alt={'phuc-khang-gems-google-play'} width={144.59}
-                                       height={55.52}/>
-                                <Image src={AppleStore} alt={'phuc-khang-gems-apple-store'} width={144.59}
-                                       height={55.52}/>
+                                <Link href={'/'}>
+                                    <Image src={GooglePlay} alt={'phuc-khang-gems-google-play'} width={144.59}
+                                           height={55.52}/>
+                                </Link>
+                                <Link href={'/'}>
+                                    <Image src={AppleStore} alt={'phuc-khang-gems-apple-store'} width={144.59}
+                                           height={55.52}/>
+                                </Link>
                             </div>
                         </div>
                         <div className={'contact-wrapper flex gap-y-[10px] flex-col pt-[20px]'}>
@@ -52,7 +57,7 @@ const Footer = () => {
                     <div className={'line border-b-[2px] border-[#DEDFE0] my-[10px] md:my-[50px]'}></div>
                     <div
                         className={'context-with-us text-subText flex flex-col gap-y-[20px] md:flex-row md:justify-between'}>
-                        <div>
+                        <div className={'flex flex-col gap-y-[10px]'}>
                             <div style={{lineHeight: '29.11px'}} className={'title font-[600] text-[22px]'}>
                                 Kết nối với chúng tôi
                             </div>
@@ -60,7 +65,7 @@ const Footer = () => {
                                 Chia sẻ trải nghiệm của bạn ngay
                             </div>
                             <div
-                                className="icons-wrapper flex gap-[20px] flex-wrap max-w-[208px] justify-start md:max-w-full">
+                                className="icons-wrapper flex gap-[20px] flex-wrap max-w-[208px] justify-start md:max-w-full pt-[10px]">
                                 <div
                                     className={'svg-item w-[56px] h-[56px] bg-primary rounded-[8px] flex justify-center items-center'}>
                                     <FacebookSVG color={'white'}/>

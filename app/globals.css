@@ -3,21 +3,37 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth!important;
+    scroll-behavior: smooth !important;
 }
+
 @keyframes ringing {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(2deg); }
-    20% { transform: rotate(-5deg); }
-    30% { transform: rotate(2deg); }
-    40% { transform: rotate(-2deg); }
-    50% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(2deg);
+    }
+    20% {
+        transform: rotate(-5deg);
+    }
+    30% {
+        transform: rotate(2deg);
+    }
+    40% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .ringing-phone {
     animation: ringing 1s infinite;
 }
+
 .ripple {
     position: relative;
     overflow: hidden;
@@ -46,62 +62,94 @@ html {
     opacity: 0.2;
     transition: 0s;
 }
-@layer base{
-    body{
+
+@layer base {
+    body {
         @apply bg-body;
     }
-    p{
+
+    p {
         @apply text-base xl:text-[24px] xl:leading-[32px] font-normal;
     }
-    h1{
+
+    h1 {
         @apply text-3xl xl:text-[64px] xl:leading-[72px] font-extrabold mb-[18px];
     }
-    h2{
+
+    h2 {
         @apply text-2xl xl:text-[48px] xl:leading-[56px] font-bold;
     }
-    h3{
+
+    h3 {
         @apply text-xl xl:text-[32px] xl:leading-[40px] font-semibold;
     }
-    .description{
+
+    .description {
         @apply text-base xl:text-[24px] xl:leading-[32px] font-normal;
     }
-    .section{
+
+    .section {
         @apply w-full h-screen pt-[60px];
     }
-    .btn{
+
+    .btn {
         @apply bg-primary text-white py-[7px] px-[20px] rounded-[10px]
         flex justify-center items-center transition-all duration-300 ripple;
     }
-    .btn-sm{
+
+    .btn-sm {
         @apply h-14;
     }
-    .btn-lg{
+
+    .btn-lg {
         @apply h-16;
     }
-    .active{
+
+    .active {
         @apply text-accent;
     }
 }
-@layer components{
+
+@layer components {
     .custom-input:hover, .custom-input:focus, .custom-input:active {
         border-color: #334821 ! important;
     }
+
     .custom-checkbox {
         transform: scale(0.9);
     }
+
+    .custom-input-no-border:hover, .custom-input-no-border:focus, .custom-input-no-border:active, .custom-input-no-border:focus-visible {
+        /*border-color: transparent ! important;*/
+        border: none!important;
+        outline: none;
+    }
 }
+
 .ant-space-item {
     width: 100% !important;
 }
-.ant-select-selection-item{
+
+.ant-select-selection-item {
     background-color: transparent;
     border: none;
 }
+
 input[type="checkbox" i] {
     border: 2px solid #666666;
     width: 18px;
     height: 18px;
 }
+
 input[type="checkbox"]:checked {
-    background-color: red; /* Change this to your desired color */
+    /*background-color: red; !* Change this to your desired color *!*/
+}
+
+.ant-modal-root .ant-modal-content {
+    padding: 0 !important;
+    margin: 0;
+}
+
+.ant-modal .ant-modal-footer {
+    margin-top: 0 !important;
 }

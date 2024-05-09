@@ -21,14 +21,20 @@ const config: Config = {
             '2xl': '1536px'
         },
         extend: {
+            maxWidth:{
+              'custom-max-width-modal-mobile': '310px!important',
+              'custom-max-width-modal-desktop': '510px!important'
+            },
             backgroundImage: {
                 'custom-intro-bg': "url('/assets/images/bg-combine.png')",
+                'custom-modal-bg': "url('/assets/images/pg-modal.png')",
             },
             backgroundPosition: {
                 'custom-intro-bg-position': 'bottom right',
             },
             backgroundSize: {
                 'custom-intro-bg-size': '60% auto',
+                'custom-modal-bg-size': 'contain',
             },
             backgroundRepeat: {
                 'custom-intro-bg-repeat': 'no-repeat',

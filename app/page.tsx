@@ -8,8 +8,10 @@ import Bg3 from "@/public/assets/images/bg3.png";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 export default function Home() {
+
     return (
         <main className="max-w-[1440px] m-auto">
             <Navbar/>
@@ -20,7 +22,7 @@ export default function Home() {
                          className="intro text-primary text-[22px] font-[600] text-center">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </div>
-                    <div id={'top'}></div>
+                    <div id={'home'}></div>
                     <div style={{lineHeight: '16.94px', letterSpacing: '2px'}}
                          className="sub-intro text-[14px] text-subText">
                         Lorem Ipsum is simply dummy text of the printing and
@@ -89,6 +91,7 @@ export default function Home() {
 
             {/*Footer*/}
             <Footer/>
+            {/*End Footer*/}
         </main>
     );
 }

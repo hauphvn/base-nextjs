@@ -1,21 +1,32 @@
 'use client';
 
-import React from 'react';
+import React, {useState} from 'react';
 import {Controller, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {formRegistry, formRegistryDefault} from "@/app/types/yupSchema";
 import {Input, Select, Space} from "antd";
 import Link from "next/link";
-
+import dynamic from "next/dynamic";
+const ModalSuccessNoSSR = dynamic(() => import('@/app/components/ModalSuccess'), {ssr: false});
+const ModalFailureNoSSR = dynamic(() => import('@/app/components/ModalFailure'), {ssr: false});
 const FormRegistry = () => {
     const {
         formState: {errors, isDirty, isValid,},
         control: controlBookFixedRoute,
+        reset,
     } = useForm({
         resolver: yupResolver(formRegistry()),
         mode: 'all',
         defaultValues: formRegistryDefault,
     });
+    const [showModal, setShowModal] = useState(false);
+    const [resultSubmit, setResultSubmit] = useState(false);
+    function handleSubmit() {
+        setResultSubmit(true);
+        setShowModal(true);
+        reset();
+    }
+
     return (
         <div className={'form-registry mx-[17px] my-[19px] px-[23px] md:px-[88.5px] py-[40px] rounded-[12px] gap-y-[20px] shadow-custom-shadow-form'}>
             <div className={'title-wrapper flex gap-y-[20px] flex-col mb-3'}>
@@ -169,10 +180,15 @@ const FormRegistry = () => {
                 )}
             />
 
-            <button disabled={(!isDirty || !isValid)}
+            <button
+                onClick={handleSubmit}
+                disabled={(!isDirty || !isValid)}
                     className={'disabled:bg-gray-500 btn h-[62px] font-bold w-full rounded-full text-[16px] mr-[14px] uppercase transition-all duration-200'}>Đăng
                 kí
             </button>
+            {showModal && (
+                resultSubmit ? <ModalSuccessNoSSR/> : <ModalFailureNoSSR/>
+            )}
         </div>
     );
 };

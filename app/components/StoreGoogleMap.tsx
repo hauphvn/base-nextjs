@@ -1,7 +1,8 @@
 'use client';
-import {APIProvider, Map} from "@vis.gl/react-google-maps";
+import {APIProvider, Map, Marker} from "@vis.gl/react-google-maps";
 
-const API_GOOGLE_MAP_KEY = 'AIzaSyB8WD2zOtTIiZiaWXoy6BRKz6lQlvXNvVw';
+const API_GOOGLE_MAP_KEY = process.env.NEXT_PUBLIC_API_GOOGLE_MAP_KEY || '';
+console.log('API_GOOGLE_MAP_KEY', API_GOOGLE_MAP_KEY);
 const StoreGoogleMap = () => {
     return (
         <div>
@@ -11,10 +12,14 @@ const StoreGoogleMap = () => {
                 <Map
                     style={{width: '100vw', height: '100vh'}}
                     defaultCenter={{lat: 10.745065600555002, lng: 106.69883811642117}}
-                    defaultZoom={15}
-                    // gestureHandling={'greedy'}
+                    defaultZoom={10}
+                    gestureHandling={'greedy'}
                     disableDefaultUI={true}
-                />
+                    fullscreenControl={true}
+                >
+                    <Marker position={{lat: 10.745065600555002, lng: 106.69883811642117}} />
+
+                </Map>
             </APIProvider>
         </div>
     );
