@@ -162,7 +162,9 @@ const FormRegistry = () => {
                     <div className={'control h-[98px]'}>
                         <div className={'flex relative'}>
                             <div className={' mt-2 condition-term flex gap-x-1 justify-center items-start'}>
-                                <input onChange={onChange} className={'custom-checkbox'} type={'checkbox'}
+                                <input
+                                    checked={value}
+                                    onChange={onChange} className={'custom-checkbox'} type={'checkbox'}
                                        name="conditionTerm"
                                        id="conditionTerm"/>
                                 <label htmlFor="conditionTerm" className={'text-[14px] text-subText'}>Tôi đã đọc, hiểu

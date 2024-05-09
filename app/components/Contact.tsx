@@ -14,7 +14,7 @@ const Contact = () => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown
             </div>
             <div className={'context-wrapper flex justify-center md:items-start flex-col items-center gap-y-[20px]'}>
-                <div className={'us text-primary text-center md:text-left text-[30px] font-[600]'}>
+                <div className={'us text-primary text-center md:text-left text-[22px] font-[600]'}>
                     Liên hệ với chúng tôi!
                 </div>
                 <div className="icons-wrapper flex gap-[20px] flex-wrap max-w-[208px] justify-center md:max-w-full">

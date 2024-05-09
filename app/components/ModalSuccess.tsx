@@ -5,7 +5,7 @@ import {Modal as ModalAntd} from "antd";
 import {OKCheckIcon, OKCheckIconMobile} from "@/public/assets/svgs";
 
 const ModalSuccess = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(true);
 
     const showModal = () => {
         setIsModalOpen(true);

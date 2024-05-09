@@ -15,7 +15,7 @@ const Footer = () => {
                     <Image src={LogoFooter} alt={'phuc-khang-gems-logo'} width={175} height={115}/>
                 </div>
                 <div className={'content-footer px-[16px]'}>
-                    <div className={'md:flex md:justify-between'}>
+                    <div className={'md:flex md:justify-between flex-wrap'}>
                         <div className={'md:max-w-[408px]'}>
                             <div style={{lineHeight: '29.11px'}}
                                  className={'title text-primary font-[600] text-[22px]'}>
